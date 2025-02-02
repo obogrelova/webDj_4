@@ -1,0 +1,25 @@
+{% load static %}
+
+<nav class="navbar navbar-expand navbar-dark bg-success">
+    <img src="{% static 'main/img/image1.jpg' %}" width="200px">
+    <a class="navbar-brand" href="{% url 'home' %}">Главная</a>
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link active" href="{% url 'page2' %}"></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'page3' %}"></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'page4' %}"></a>
+        </li>
+    </ul>
+
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Поиск по сайту" />
+        <button class="btn btn-primary" type="submit">Поиск</button>
+    </form>
+</nav>
