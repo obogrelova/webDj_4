@@ -2,11 +2,13 @@
 
 <nav class="navbar navbar-expand navbar-dark bg-success">
     <img src="{% static 'films/img/image1.jpg' %}" width="200px">
-    <a class="navbar-brand" href="{% url 'home' %}">Главная</a>
 
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a class="nav-link active" href="{% url 'page2' %}"></a>
+            <a class="nav-link active" href="{% url 'home' %}">Главная</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{% url 'page2' %}">Добавление фильма</a>
         </li>
     </ul>
 
