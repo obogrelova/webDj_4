@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Film
-from .form import FilmForm
+from .forms import FilmForm
 
 def index(request):
     films = Film.object.all()
