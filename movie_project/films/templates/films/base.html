@@ -15,13 +15,20 @@
 <body>
     {% include "films/nav.html" %}
 
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Фильмы с Энтони Хопкинсом</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-3 col-lg-2 bg-light sidebar p-3">
+                <div class="text-center mb-4">
+                    <img src="{% static 'films/img/image1.jpg' %}" class="img-fluid rounded-circle" width="150">
+                    <h5 class="mt-2">Фильмы с Энтони Хопкинсом</h5>
+                </div>
+            </aside>
 
-        <main class="container my-4">
-            {% block content %}
-            {% endblock %}
-        </main>
+            <main class="col-md-9 col-lg-10 p-4">
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
     </div>
 
     {% include "films/footer.html" %}

@@ -8,7 +8,28 @@
     <div class="container mt-5">
         <h1 class="text-center mb-4">О фильмах с Энтони Хопкинсом</h1>
 
-
+        {% if films %}
+            <div class="row">
+                {% for film in films %}
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ film.title }}</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Описание фильма</h6>
+                                <p class="card-text">{{ film.description }}</p>
+                                <hr>
+                                <h6 class="card-subtitle mb-2 text-muted">Отзыв о фильме</h6>
+                                <p class="card-text">{{ film.review }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="alert alert-warning text-center" role="alert">
+                Фильмов нет
+            </div>
+        {% endif %}
     </div>
 
 {% endblock %}
