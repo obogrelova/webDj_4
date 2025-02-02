@@ -3,7 +3,7 @@ from .models import Film
 from .forms import FilmForm
 
 def index(request):
-    films = Film.object.all()
+    films = Film.objects.all()
     return render(request, 'films/index.html', {'films': films})
 
 def add_new_movie(request):
