@@ -12,6 +12,7 @@ def add_new_movie(request):
         form = FilmForm(request.POST)
         if form.is_valid():
             form.save()
+            return ridirect('home')
         else:
             error = "Данные были заполнены некорректно"
     form = FilmForm()

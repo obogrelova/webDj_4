@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <h3 class="text-center mb-4">Добавить новый фильм:</h3>
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Добавить новый фильм:</h3>
 
-    <form method="post" novalidate>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Добавить фильм</button>
-    </form>
-    <p>{{ error }}</p>
-</div>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Добавить фильм</button>
+        </form>
+        <p>{{ error }}</p>
+    </div>
 {% endblock %}
