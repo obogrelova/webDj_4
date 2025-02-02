@@ -3,8 +3,8 @@ from .models import Film
 from .forms import FilmForm
 
 def index(request):
-    films = Film.objects.all()
-    return render(request, 'films/index.html', {'films': films})
+    movie = Film.objects.all()
+    return render(request, 'films/index.html', {'movie': movie})
 
 def add_new_movie(request):
     if request.method == 'POST':
