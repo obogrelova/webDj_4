@@ -3,8 +3,8 @@ from .models import Film
 from .forms import FilmForm
 
 def index(request):
-    movie = Film.objects.all()
-    return render(request, 'films/index.html', {'movie': movie})
+    films = Film.objects.all()
+    return render(request, 'films/index.html', {'films': films})
 
 def add_new_movie(request):
     error = ""
@@ -12,7 +12,7 @@ def add_new_movie(request):
         form = FilmForm(request.POST)
         if form.is_valid():
             form.save()
-            return ridirect('home')
+            return redirect('home')
         else:
             error = "Данные были заполнены некорректно"
     form = FilmForm()
